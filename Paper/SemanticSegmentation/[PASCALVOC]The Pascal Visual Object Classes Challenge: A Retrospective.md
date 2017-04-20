@@ -1,5 +1,3 @@
-### The Pascal Visual Object Classes Challenge: A Retrospective
-
 ### 基本情况
 这篇文章PASCALVOC官方发表在IJCV2015上的一篇文章，主要是对之前的2008-2012challenge的回顾.  
 
