@@ -19,8 +19,8 @@ Batch Normalization允许我们使用更高的学习率和更少的关注初始�
 数据归一化方法很简单，就是要让数据具有0均值和单位方差，如果简单的这么干，会降低层的表达能力.比如在使用sigmoid激活函数的时候，如果把数据限制到0均值单位方差，那么相当于只使用了激活函数中近似线性的部分，这显然会降低模型表达能力.为此，作者添加了两个参数，用来保持模型的表达能力.其实是一个仿射变换(scale and shift). ![1](https://cloud.githubusercontent.com/assets/16068384/25042342/e79902e2-2149-11e7-9e49-072413618007.png)  
 其实，当两个参数取特定值时，可以恢复到原始的某一层学到的特征.  
 BN的forwardpropogation和backpropogation  
-![1](https://cloud.githubusercontent.com/assets/16068384/25042084/c5314d7e-2147-11e7-8fff-1d710f7df71d.png)  
-![2](https://cloud.githubusercontent.com/assets/16068384/25042087/c8478af0-2147-11e7-99d6-c08ed065c631.png)  
+![1](http://i4.buimg.com/589172/c63a4fbc26931e2f.png)  
+![2](http://i4.buimg.com/589172/0a0f1ee1c18f06a5.png)  
 训练过程中,用一个Batch的均值和方差作为对整个数据集均值和方差的估计,用一个Batch的均值和方差作为对整个数据集均值和方差的估计. 但是在测试过程中，使用的是整体的均值和方差.![1](https://cloud.githubusercontent.com/assets/16068384/25042418/7459c996-214a-11e7-8c76-213a3eaf4c23.png)  
 
 ### BN的优势
