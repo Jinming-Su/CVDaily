@@ -2,7 +2,7 @@
 这是ICCV2015的一篇文章，所属领域为semantic segmentation.这篇文章比SegNet早.
 
 ### Abstract
-提出深度反卷积网络: 实在vgg16的顶部添加反卷积层.反卷积层由deconvolution、relu和upooling组成.  
+提出深度反卷积网络: 是在vgg16的顶部添加反卷积层.反卷积层由deconvolution、relu和upooling组成.  
 通过把每一张图片的不同的proposal送入deploy的网络，通过aggregate得到最后的语义分割结果.  
 改进之处: 针对基于FCN的方法（FCN感受野固定），实现处理精细的结构以及不同尺度大小的目标.  
 
