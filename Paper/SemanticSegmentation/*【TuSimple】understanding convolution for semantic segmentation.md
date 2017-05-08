@@ -27,3 +27,6 @@ HDC的另一个优点是，由于dilation rates可以是任意的，所以能够
 # Experiments
 接着就是实验部分，具体细节参看原文，效果确实不错.  
 ![1](http://i2.muimg.com/589172/21b91380f2e72fd4.png)  
+
+# 相关资料
+* 源代码，MXNET实现: https://goo.gl/DQMeun
