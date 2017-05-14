@@ -44,5 +44,6 @@ lated convolutions. arXiv:1511.07122, 2015.
 * [41] CRFASRNN
 
 # 相关资料
+* 项目主页: https://hszhao.github.io/projects/pspnet/
 * 源代码(没有模型文件): https://github.com/hszhao/PSPNet
 * 复现效果似乎不好，参见知乎上的评论：https://www.zhihu.com/question/53356671/answer/144164564
