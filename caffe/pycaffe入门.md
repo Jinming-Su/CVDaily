@@ -1,19 +1,9 @@
----
-title: pycaffe入门
-date: 2017-03-22 00:00:01
-categories:
-- Deep_Learning
-- caffe
-tags:
-- pycaffe
-description: ...
----
-
-### 参考
+# 参考
 * Caffe for Python 官方教程(翻译)  http://blog.csdn.net/jnulzl/article/details/52077915
 * Caffe均值文件mean.binaryproto转mean.npy http://blog.csdn.net/hyman_yx/article/details/51732656
+* 用Python做科学计算 http://old.sebug.net/paper/books/scipydoc/index.html
 
-### 实例
+# 实例
 * **说明** ： 以下例子是针对alexnet的
 * Caffe均值文件mean.binaryproto转mean.npy
   
