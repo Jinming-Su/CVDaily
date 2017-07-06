@@ -2,6 +2,18 @@
 1. 先查看gpu是否是英伟达的  
 `lspci | grep -i nvidia`  
 ![1](http://i1.buimg.com/589172/92e9a3592b166265.png)  
+2. 查看系统架构
+`uname -m && cat /etc/*release ` // x86_64才能安装caffe
+3. 安装nvidia驱动`(如果没安装的话)
+下载地址: `http://www.geforce.cn/drivers`  
+安装:  
+```
+sudo chmod +x NVIDIA**.run
+关闭X-Window，很简单：sudo service lightdm stop，然后切换到tty1：Ctrl+Alt+F1即可
+sudo ./NVIDIA.run开始安装，安装过程比较快，根据提示选择即可
+安装完毕后，重新启动X-Window：sudo service lightdm start，然后Ctrl+Alt+F7进入图形界面
+查看显卡驱动安装情况nvidia-smi
+```
 
 # 安装cuda
 1. 查看gpu是否支持cuda(Compute Unified Device Architecture)，以及计算容量  
@@ -12,7 +24,7 @@
 
 # 安装cudnn
 1. 安装cuDNN(NVIDIA cuDNN是用于深度神经网络的GPU加速库)
-下载地址: `https://developer.nvidia.com/rdp/cudnn-download`（需要注册）
+下载地址: `https://developer.nvidia.com/rdp/cudnn-download`(需要注册)
 安装:  
 
 ```
