@@ -1,7 +1,7 @@
-###说明
+# 说明
 * cuda即compute unified device architecture.是NVIDIA推出的运算平台，所以amd不支持，不错据说2015年后开始，amd可能支持cuda.
 
-### 外部依赖库安装
+# 外部依赖库安装
 * caffe有很多外部依赖库，这些库可以通过apt-get管理器进行安装
 * 安装opencv(一个开源计算机视觉库)
     `sudo apt-get install libopencv-dev`
@@ -19,7 +19,7 @@
     sudo apt-get install libgflags-dev libgoogle-glog-dev liblmdb-dev 
     ```
 
-### 安装caffe
+# 安装caffe
 * 下载caffe
     `git clone git://github.com/BVLC/caffe.git`
 * 在该目录下拷贝makefile配置文件
@@ -32,7 +32,7 @@
     make test
     make runtest
     ```
-### 测试例程mnist
+# 测试例程mnist
 * 运行脚本程序获取MNIST数据集，并将其转换为lmdb格式
     
     ```
