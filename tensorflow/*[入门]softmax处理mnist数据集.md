@@ -1,3 +1,4 @@
+```
 #!/usr/bin/python
 # -*- coding: utf-8 -*-  
 
@@ -35,3 +36,4 @@ for i in range(10000):
     sess.run(train_step, feed_dict={x: batch_xs, y_: batch_ys})
     if i % 1000 == 0:
         print sess.run(accuracy, feed_dict = {x: mnist.test.images, y_ : mnist.test.labels})
+```
