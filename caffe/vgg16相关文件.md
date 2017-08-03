@@ -1255,3 +1255,6 @@ layer {
 # VGG_ILSVRC_16_layers.caffemodel
 这个文件一般比较难找，上传到百度网盘了，自行下载吧  
 链接: https://pan.baidu.com/s/1o8FkDqa 密码: fpek
+
+# 相关文献
+[1] Simonyan K, Zisserman A. Very deep convolutional networks for large-scale image recognition[J]. arXiv preprint arXiv:1409.1556, 2014.
