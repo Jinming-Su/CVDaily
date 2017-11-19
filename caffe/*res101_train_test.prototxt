@@ -45,21 +45,14 @@ layer {
       lr_mult: 1
       decay_mult: 1
     }
-    param {
-      lr_mult: 2
-      decay_mult: 0
-    }
     convolution_param {
 		num_output: 64
 		kernel_size: 7
 		pad: 3
 		stride: 2
+		bias_term: false
 		weight_filler {
           type: "xavier"
-        }
-        bias_filler {
-          type: "constant"
-          value: 0
         }
 	}
 }
