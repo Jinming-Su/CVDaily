@@ -1,38 +1,38 @@
 name: "ResNet-101"
 layer {
-  name: "data"
-  type: "Data"
-  top: "data"
-  top: "label"	
-  include {
-    phase: TRAIN
-  }
-  transform_param {
-    mean_file: "data/train.binaryproto"
-    mirror: true
-  }
-  data_param {
-    source: "data/train_lmdb"
-    batch_size: 8 
-    backend: LMDB
-  }
+    name: "data"
+    type: "Data"
+    top: "data"
+    top: "label"	
+    include {
+      phase: TRAIN
+    }
+    transform_param {
+      mean_file: "data/train.binaryproto"
+      mirror: true
+    }
+    data_param {
+      source: "data/train_lmdb"
+      batch_size: 8 
+      backend: LMDB
+    }
 }
 layer {
-  name: "data"
-  type: "Data"
-  top: "data"
-  top: "label"	
-  include {
-    phase: TEST
-  }
-  transform_param {
-    mean_file: "data/train.binaryproto"
-  }
-  data_param {
-    source: "data/test_lmdb"
-    batch_size: 8
-    backend: LMDB
-  }
+    name: "data"
+    type: "Data"
+    top: "data"
+    top: "label"	
+    include {
+      phase: TEST
+    }
+    transform_param {
+      mean_file: "data/train.binaryproto"
+    }
+    data_param {
+      source: "data/test_lmdb"
+      batch_size: 8
+      backend: LMDB
+    }
 }
 
 ########## conv1
@@ -41,7 +41,7 @@ layer {
 	top: "conv1"
 	name: "conv1"
 	type: "Convolution"
-    param {
+	param {
       lr_mult: 1
       decay_mult: 1
     }
@@ -110,7 +110,6 @@ layer {
 	top: "res2a_branch1"
 	name: "res2a_branch1"
 	type: "Convolution"
-    
 	param {
       lr_mult: 1
       decay_mult: 1
@@ -162,7 +161,6 @@ layer {
 	top: "res2a_branch2a"
 	name: "res2a_branch2a"
 	type: "Convolution"
-    
 	param {
       lr_mult: 1
       decay_mult: 1
@@ -221,7 +219,6 @@ layer {
 	top: "res2a_branch2b"
 	name: "res2a_branch2b"
 	type: "Convolution"
-    
 	param {
       lr_mult: 1
       decay_mult: 1
@@ -280,7 +277,6 @@ layer {
 	top: "res2a_branch2c"
 	name: "res2a_branch2c"
 	type: "Convolution"
-    
 	param {
       lr_mult: 1
       decay_mult: 1
@@ -347,7 +343,6 @@ layer {
 	top: "res2b_branch2a"
 	name: "res2b_branch2a"
 	type: "Convolution"
-    
 	param {
       lr_mult: 1
       decay_mult: 1
@@ -406,7 +401,6 @@ layer {
 	top: "res2b_branch2b"
 	name: "res2b_branch2b"
 	type: "Convolution"
-    
 	param {
       lr_mult: 1
       decay_mult: 1
@@ -465,7 +459,6 @@ layer {
 	top: "res2b_branch2c"
 	name: "res2b_branch2c"
 	type: "Convolution"
-    
 	param {
       lr_mult: 1
       decay_mult: 1
@@ -532,7 +525,6 @@ layer {
 	top: "res2c_branch2a"
 	name: "res2c_branch2a"
 	type: "Convolution"
-    
 	param {
       lr_mult: 1
       decay_mult: 1
@@ -591,7 +583,6 @@ layer {
 	top: "res2c_branch2b"
 	name: "res2c_branch2b"
 	type: "Convolution"
-    
 	param {
       lr_mult: 1
       decay_mult: 1
@@ -650,7 +641,6 @@ layer {
 	top: "res2c_branch2c"
 	name: "res2c_branch2c"
 	type: "Convolution"
-    
 	param {
       lr_mult: 1
       decay_mult: 1
@@ -717,7 +707,6 @@ layer {
 	top: "res3a_branch1"
 	name: "res3a_branch1"
 	type: "Convolution"
-    
 	param {
       lr_mult: 1
       decay_mult: 1
@@ -768,7 +757,6 @@ layer {
 	top: "res3a_branch2a"
 	name: "res3a_branch2a"
 	type: "Convolution"
-    
 	param {
       lr_mult: 1
       decay_mult: 1
@@ -826,7 +814,6 @@ layer {
 	top: "res3a_branch2b"
 	name: "res3a_branch2b"
 	type: "Convolution"
-    
 	param {
       lr_mult: 1
       decay_mult: 1
@@ -885,7 +872,6 @@ layer {
 	top: "res3a_branch2c"
 	name: "res3a_branch2c"
 	type: "Convolution"
-    
 	param {
       lr_mult: 1
       decay_mult: 1
@@ -952,7 +938,6 @@ layer {
 	top: "res3b1_branch2a"
 	name: "res3b1_branch2a"
 	type: "Convolution"
-    
 	param {
       lr_mult: 1
       decay_mult: 1
@@ -1011,7 +996,6 @@ layer {
 	top: "res3b1_branch2b"
 	name: "res3b1_branch2b"
 	type: "Convolution"
-    
 	param {
       lr_mult: 1
       decay_mult: 1
@@ -6279,19 +6263,19 @@ layer {
     }
 }
 layer {
-  name: "accuracy"
-  type: "Accuracy"
-  bottom: "fc30_new"
-  bottom: "label"
-  top: "accuracy"
-  include {
-    phase: TEST
-  }
+    name: "accuracy"
+    type: "Accuracy"
+    bottom: "fc30_new"
+    bottom: "label"
+    top: "accuracy"
+    include {
+      phase: TEST
+    }
 }
 layer {
-  name: "loss"
-  type: "SoftmaxWithLoss"
-  bottom: "fc30_new"
-  bottom: "label"
-  top: "loss"
+    name: "loss"
+    type: "SoftmaxWithLoss"
+    bottom: "fc30_new"
+    bottom: "label"
+    top: "loss"
 }
